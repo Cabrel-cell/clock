@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:linear-gradient(#2bc0e4, #eaecc6);
+}
+
+.container{
+    position: relative;
+    background: #fff;
+    min-height: 500px;
+    border-radius: 14px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    display: flex;
+    background: transaprent;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock{
+    position: relative;
+    width: 450px;
+    height: 450px;
+    background: #555;
+    border-radius: 50%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border: 3px solid #fff;
+    border-radius: 24px;
+    z-index: 100000;
+}
+
+.clock span{
+    position: absolute;
+    inset: 20px;
+    color: #fff;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
+}
+
+.clock span b{
+    font-size: 1.5em;
+    opacity: 0.5;
+    font-weight: 400;
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+}
+
+.circle i{
+    position: absolute;
+    width: 6px;
+    height: 50%;
+    background: var(--clr);
+    opacity: 0.25;
+    transform-origin: bottom;
+    transform: scaleY(0.5);
+}
+
+.circle{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+.circle2{
+    width: 240px;
+    height: 240px;
+    z-index: 9;
+}
+
+.circle3{
+    width: 180px;
+    height: 180px;
+    z-index: 8;
+}
+
+.circle:nth-child(1) i {
+    width: 2px;
+}
+
+.circle:nth-child(2) i {
+    width: 6px;
+}
+
+.circle:nth-child(1) i {
+    width: 2px;
+}
+
+.circle::before{
+    content: '';
+    position: absolute;
+    top: -8.5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--clr);
+    box-shadow: 0 0 15px var(--clr);
+}
